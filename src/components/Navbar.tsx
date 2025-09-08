@@ -20,10 +20,13 @@ const Navbar = () => {
   const isActiveLink = (path: string) => location.pathname === path;
 
   const productCategories = [
-    { name: "Insects Control", path: "/products/insects" },
-    { name: "Crop Protection", path: "/products/crops" },
-    { name: "Fertilizers", path: "/products/fertilizers" },
-    { name: "Organic Solutions", path: "/products/organic" },
+    { name: "Insecticides", path: "/products/insects" },
+    { name: "Fungicides", path: "/products/crops" },
+    { name: "Herbicides", path: "/products/fertilizers" },
+    { name: "Soil-Health", path: "/products/organic" },
+    { name: "Plant Immunity", path: "/products/crops" },
+    { name: "Plant Nutrition", path: "/products/fertilizers" },
+    { name: "Water Soluble Fertilizers", path: "/products/organic" },
   ];
 
   const gallery = [
