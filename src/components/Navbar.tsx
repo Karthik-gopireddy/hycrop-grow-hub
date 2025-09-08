@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,59 +14,114 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  const [opengalary, setOpengalary] = useState(false);
+  const [open, setOpen] = useState(false);
+
   const isActiveLink = (path: string) => location.pathname === path;
 
   const productCategories = [
-    { name: 'Insects Control', path: '/products/insects' },
-    { name: 'Crop Protection', path: '/products/crops' },
-    { name: 'Fertilizers', path: '/products/fertilizers' },
-    { name: 'Organic Solutions', path: '/products/organic' },
+    { name: "Insects Control", path: "/products/insects" },
+    { name: "Crop Protection", path: "/products/crops" },
+    { name: "Fertilizers", path: "/products/fertilizers" },
+    { name: "Organic Solutions", path: "/products/organic" },
+  ];
+
+  const gallery = [
+    { name: "Images", path: "/ImageGallery" },
+    { name: "Videos", path: "/VideosGallary" },
   ];
 
   return (
-    <nav className="bg-background border-b border-border sticky top-0 z-50 backdrop-blur-md bg-background/95">
+    <nav className=" border-b border-border sticky top-0 z-50 backdrop-blur-md bg-background/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">HYCROP</div>
+            <img
+              src="/hycropLogo.png"
+              alt="hycroplogo"
+              className="h-[50px] w-[180px]"
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ">
             <Link
               to="/"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActiveLink('/') ? 'text-primary' : 'text-foreground'
+              className={`text-sm font-bold transition-colors hover:text-primary  ${
+                isActiveLink("/") ? "text-primary" : "text-foreground"
               }`}
             >
               Home
             </Link>
-            
+
             <Link
               to="/about"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActiveLink('/about') ? 'text-primary' : 'text-foreground'
+              className={`text-sm font-bold transition-colors hover:text-primary ${
+                isActiveLink("/about") ? "text-primary" : "text-foreground"
               }`}
             >
               About
             </Link>
 
-            {/* Products Dropdown */}
-            <DropdownMenu>
+            <DropdownMenu open={open} onOpenChange={setOpen}>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className={`text-sm font-medium transition-colors hover:text-primary flex items-center space-x-1 ${
-                    location.pathname.startsWith('/products') ? 'text-primary' : 'text-foreground'
+                  onMouseEnter={() => setOpen(true)}
+                  onMouseLeave={() => setOpen(false)}
+                  className={`text-sm font-bold transition-colors hover:text-primary flex items-center ${
+                    location.pathname.startsWith("/products")
+                      ? "text-primary"
+                      : "text-foreground"
                   }`}
                 >
                   <span>Products</span>
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-48 bg-card border border-border shadow-medium">
+
+              <DropdownMenuContent
+                className="w-42 bg-card border border-border shadow-medium"
+                onMouseEnter={() => setOpen(true)}
+                onMouseLeave={() => setOpen(false)}
+              >
                 {productCategories.map((category) => (
+                  <DropdownMenuItem key={category.path} asChild>
+                    <Link
+                      to={category.path}
+                      className="w-full px-3 py-2 text-sm hover:bg-secondary transition-colors cursor-pointer"
+                    >
+                      {category.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu open={opengalary} onOpenChange={setOpengalary}>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  onMouseEnter={() => setOpengalary(true)}
+                  onMouseLeave={() => setOpengalary(false)}
+                  className={`text-sm font-bold transition-colors hover:text-primary flex items-center  ${
+                    location.pathname.startsWith("/products")
+                      ? "text-primary"
+                      : "text-foreground"
+                  }`}
+                >
+                  <span>Gallery</span>
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+
+              <DropdownMenuContent
+                className="w-32 bg-card border border-border shadow-medium"
+                onMouseEnter={() => setOpengalary(true)}
+                onMouseLeave={() => setOpengalary(false)}
+              >
+                {gallery?.map((category) => (
                   <DropdownMenuItem key={category.path} asChild>
                     <Link
                       to={category.path}
@@ -81,16 +136,19 @@ const Navbar = () => {
 
             <Link
               to="/contact"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActiveLink('/contact') ? 'text-primary' : 'text-foreground'
+              className={`text-sm font-bold transition-colors hover:text-primary ${
+                isActiveLink("/contact") ? "text-primary" : "text-foreground"
               }`}
             >
               Contact
             </Link>
-
-            <Button variant="default" className="bg-gradient-primary hover:opacity-90">
+            {/* 
+            <Button
+              variant="default"
+              className="bg-gradient-primary hover:opacity-90"
+            >
               Get Quote
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile menu button */}
@@ -128,7 +186,9 @@ const Navbar = () => {
                 About
               </Link>
               <div className="px-3 py-2">
-                <div className="text-base font-medium text-foreground mb-2">Products</div>
+                <div className="text-base font-medium text-foreground mb-2">
+                  Products
+                </div>
                 {productCategories.map((category) => (
                   <Link
                     key={category.path}
@@ -148,7 +208,9 @@ const Navbar = () => {
                 Contact
               </Link>
               <div className="px-3 py-2">
-                <Button className="w-full bg-gradient-primary">Get Quote</Button>
+                <Button className="w-full bg-gradient-primary">
+                  Get Quote
+                </Button>
               </div>
             </div>
           </div>

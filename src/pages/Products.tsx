@@ -66,7 +66,7 @@ const Products = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      {/* <Navbar /> */}
       
       {/* Hero Section */}
       <section className="py-20 bg-gradient-primary">
@@ -284,7 +284,7 @@ const Products = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

@@ -41,7 +41,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 9876543210", "+91 9876543211"],
+      details: ["+91 6303633713", "+91 8688023889"],
       description: "Call us for immediate assistance"
     },
     {
@@ -53,7 +53,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Agricultural Avenue", "Green Valley, State 123456"],
+      details: ["Shop No: 229, Ground Floor, Vishnupriya Commercial Complex, Factories Ward, Guntur, Andra Pradesh, 522003"],
       description: "Visit our headquarters"
     },
     {
@@ -79,7 +79,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      {/* <Navbar /> */}
       
       {/* Hero Section */}
       <section className="py-20 bg-gradient-primary">
@@ -269,7 +269,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

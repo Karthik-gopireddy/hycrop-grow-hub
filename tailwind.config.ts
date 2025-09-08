@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx,jsx,js}",
+    "./components/**/*.{ts,tsx,jsx,js}",
+    "./app/**/*.{ts,tsx,jsx,js}",
+    "./src/**/*.{ts,tsx,jsx,js}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -62,7 +67,7 @@ export default {
         "primary-green-dark": "hsl(var(--primary-green-dark))",
         "accent-yellow": "hsl(var(--accent-yellow))",
         "earth-brown": "hsl(var(--earth-brown))",
-        "cream": "hsl(var(--cream))",
+        cream: "hsl(var(--cream))",
         "success-green": "hsl(var(--success-green))",
       },
       backgroundImage: {
@@ -71,9 +76,9 @@ export default {
         "gradient-accent": "var(--gradient-accent)",
       },
       boxShadow: {
-        "soft": "var(--shadow-soft)",
-        "medium": "var(--shadow-medium)",
-        "strong": "var(--shadow-strong)",
+        soft: "var(--shadow-soft)",
+        medium: "var(--shadow-medium)",
+        strong: "var(--shadow-strong)",
       },
       borderRadius: {
         lg: "var(--radius)",

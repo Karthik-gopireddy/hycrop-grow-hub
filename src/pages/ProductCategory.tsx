@@ -131,7 +131,7 @@ const ProductCategory = () => {
   if (!currentCategory) {
     return (
       <div className="min-h-screen bg-background">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-foreground mb-4">Category Not Found</h1>
@@ -140,14 +140,14 @@ const ProductCategory = () => {
             </Link>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      {/* <Navbar /> */}
       
       {/* Hero Section */}
       <section className="py-16 bg-gradient-primary">
@@ -317,7 +317,7 @@ const ProductCategory = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

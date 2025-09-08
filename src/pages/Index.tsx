@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Leaf, TrendingUp, Users, Award, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Gallery from '@/components/Gallery';
 
 const Index = () => {
   const features = [
@@ -41,7 +42,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      {/* <Navbar /> */}
       
       {/* Hero Section */}
       <HeroSection />
@@ -77,6 +78,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <Gallery/>
+    
 
       {/* Benefits Section */}
       <section className="py-20">
@@ -148,7 +151,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/products">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white text-primary">
                   View Products
                 </Button>
               </Link>
@@ -157,7 +160,7 @@ const Index = () => {
         </div>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
