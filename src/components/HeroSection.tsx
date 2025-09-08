@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import heroFarmerTomato from '@/assets/hero-farmer-tomato.jpg';
 import heroFarmerChili from '@/assets/hero-farmer-chili.jpg';
 import heroFarmerCrops from '@/assets/hero-farmer-crops.jpg';
+import heroFarmerRedChili from '@/assets/hero-farmer-red-chili.jpg';
+import heroFarmerPaddy from '@/assets/hero-farmer-paddy.jpg';
+import heroFarmerCotton from '@/assets/hero-farmer-cotton.jpg';
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,6 +24,24 @@ const HeroSection = () => {
       title: "Quality Solutions",
       subtitle: "Proven Results",
       description: "Effective crop protection for chili cultivation and sustainable farming practices"
+    },
+    {
+      image: heroFarmerRedChili,
+      title: "Abundant Harvest",
+      subtitle: "Rich Red Chilies",
+      description: "Advanced solutions for premium red chili cultivation and heavy crop yields"
+    },
+    {
+      image: heroFarmerPaddy,
+      title: "Golden Grains",
+      subtitle: "Rice Excellence",
+      description: "Complete rice farming solutions for healthy paddy and superior grain quality"
+    },
+    {
+      image: heroFarmerCotton,
+      title: "Pure Cotton",
+      subtitle: "White Gold",
+      description: "Specialized cotton farming products for premium fiber quality and yield"
     },
     {
       image: heroFarmerCrops,
