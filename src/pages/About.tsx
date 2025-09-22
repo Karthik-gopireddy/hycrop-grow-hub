@@ -232,14 +232,14 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-primary">
+      <section className="py-20 ">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-white">
+          <div className="text-black">
             <Award className="h-16 w-16 mx-auto mb-6 text-accent" />
             <h2 className="text-4xl font-bold mb-4">
               Ready to Partner with Us?
             </h2>
-            <p className="text-xl mb-8 text-white/90">
+            <p className="text-xl mb-8 text-black/90">
               Experience the HYCROP difference and transform your farming
               success
             </p>
@@ -247,18 +247,14 @@ const About = () => {
               <Link to="/contact">
                 <Button
                   size="lg"
-                  variant="secondary"
-                  className="bg-white text-primary hover:bg-white/90"
+                  // variant="secondary"
+                  className="bg-green-800 text-white"
                 >
                   Contact Us Today
                 </Button>
               </Link>
               <Link to="/products">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white text-primary"
-                >
+                <Button size="lg" className="bg-green-800 text-white ">
                   View Our Products
                 </Button>
               </Link>

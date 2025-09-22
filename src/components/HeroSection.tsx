@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroFarmerTomato from "@/assets/hero-farmer-tomato.jpg";
-import heroFarmerChili from "@/assets/hero-farmer-chili.jpg";
-import heroFarmerCrops from "@/assets/hero-farmer-crops.jpg";
-import heroFarmerRedChili from '@/assets/hero-farmer-red-chili.jpg';
-import heroFarmerPaddy from '@/assets/hero-farmer-paddy.jpg';
-import heroFarmerCotton from '@/assets/hero-farmer-cotton.jpg';
+import heroFarmerTomato from "@/assets/hero-farmer-mazee.png";
+
+// import heroFarmerCrops from "@/assets/hero-farmer-crops.jpg";
+import heroFarmerRedChili from "@/assets/hero-farmer-red-chili.png";
+import heroFarmerPaddy from "@/assets/hero-farmer-paddy.png";
+import heroFarmerCotton from "@/assets/hero-farmer-cotton.png";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,7 +21,7 @@ const HeroSection = () => {
         "Premium fertilizers and pesticides for healthy tomato crops and maximum yield",
     },
     {
-      image: heroFarmerChili,
+      image: heroFarmerTomato,
       title: "Quality Solutions",
       subtitle: "Proven Results",
       description:
@@ -31,44 +31,22 @@ const HeroSection = () => {
       image: heroFarmerRedChili,
       title: "Abundant Harvest",
       subtitle: "Rich Red Chilies",
-      description: "Advanced solutions for premium red chili cultivation and heavy crop yields"
-    },
-    {
-      image: heroFarmerPaddy,
-      title: "Golden Grains",
-      subtitle: "Rice Excellence",
-      description: "Complete rice farming solutions for healthy paddy and superior grain quality"
-    },
-    {
-      image: heroFarmerCotton,
-      title: "Pure Cotton",
-      subtitle: "White Gold",
-      description: "Specialized cotton farming products for premium fiber quality and yield"
-    },
-    {
-      image: heroFarmerRedChili,
-      title: "Abundant Harvest",
-      subtitle: "Rich Red Chilies",
-      description: "Advanced solutions for premium red chili cultivation and heavy crop yields"
-    },
-    {
-      image: heroFarmerPaddy,
-      title: "Golden Grains",
-      subtitle: "Rice Excellence",
-      description: "Complete rice farming solutions for healthy paddy and superior grain quality"
-    },
-    {
-      image: heroFarmerCotton,
-      title: "Pure Cotton",
-      subtitle: "White Gold",
-      description: "Specialized cotton farming products for premium fiber quality and yield"
-    },
-    {
-      image: heroFarmerCrops,
-      title: "Expert Care",
-      subtitle: "Better Harvest",
       description:
-        "Comprehensive agricultural solutions for diverse crops and farming success",
+        "Advanced solutions for premium red chili cultivation and heavy crop yields",
+    },
+    {
+      image: heroFarmerPaddy,
+      title: "Golden Grains",
+      subtitle: "Rice Excellence",
+      description:
+        "Complete rice farming solutions for healthy paddy and superior grain quality",
+    },
+    {
+      image: heroFarmerCotton,
+      title: "Pure Cotton",
+      subtitle: "White Gold",
+      description:
+        "Specialized cotton farming products for premium fiber quality and yield",
     },
   ];
 
@@ -91,7 +69,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Images */}
+      {/* Background Images with blur + overlay */}
       {heroSlides.map((slide, index) => (
         <div
           key={index}
@@ -104,8 +82,10 @@ const HeroSection = () => {
             style={{
               backgroundImage: `url(${slide.image})`,
             }}
-          />
-          <div className="absolute inset-0" />
+          >
+            {/* Dark + blur overlay */}
+            <div className="absolute inset-0 bg-black/20 " />
+          </div>
         </div>
       ))}
 
@@ -113,14 +93,14 @@ const HeroSection = () => {
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              <span className="block text-yellow-500">
+            <h1 className="text-6xl md:text-7xl font-bold drop-shadow-lg">
+              <span className="block w-fit  mx-auto bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent  h-[80px]">
                 {heroSlides[currentSlide].title}
               </span>
               <span className="block">{heroSlides[currentSlide].subtitle}</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
               {heroSlides[currentSlide].description}
             </p>
 
@@ -128,7 +108,7 @@ const HeroSection = () => {
               <Link to="/products">
                 <Button
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 text-lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 text-lg shadow-lg"
                 >
                   Explore Products
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -138,7 +118,7 @@ const HeroSection = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-white text-white hover:bg-white text-primary font-semibold px-8 py-3 text-lg"
+                  className="border-white text-black hover:bg-white hover:text-primary font-semibold px-8 py-3 text-lg shadow-lg"
                 >
                   View Gallery
                 </Button>
