@@ -68,13 +68,13 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden flex">
       {/* Background Images with blur + overlay */}
       {heroSlides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 transition-opacity duration-1000   ${
+            index === currentSlide ? "opacity-100 " : "opacity-0"
           }`}
         >
           <div
@@ -90,17 +90,17 @@ const HeroSection = () => {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            <h1 className="text-6xl md:text-7xl font-bold drop-shadow-lg">
-              <span className="block w-fit  mx-auto bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent  h-[80px]">
+      <div className="relative z-10 flex items-center justify-start h-full ">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white lg:ml-12 ">
+          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 ">
+            <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg">
+              <span className="block w-fit  mx-auto bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent  h-[57px]">
                 {heroSlides[currentSlide].title}
               </span>
-              <span className="block">{heroSlides[currentSlide].subtitle}</span>
+              <span className="block ">{heroSlides[currentSlide].subtitle}</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
+            <p className="text-xl md:text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
               {heroSlides[currentSlide].description}
             </p>
 

@@ -14,6 +14,7 @@ import VideoGallery from "./pages/VideoGallery";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScroolToTop from "../src/components/ScroolToTop"
+import CareersPage from "./pages/CareersPage"
 
 const queryClient = new QueryClient();
 
@@ -35,7 +36,8 @@ const App = () => (
           <Route path="/products/:category" element={<ProductCategory />} />
           <Route path="/ImageGallery" element={<ImageGallery />} />
           <Route path="/VideosGallary" element={<VideoGallery />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/Careers" element={<CareersPage />} />
+       
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

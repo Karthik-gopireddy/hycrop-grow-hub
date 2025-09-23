@@ -137,6 +137,15 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+             <Link
+              to="/Careers"
+              className={`text-sm font-bold transition-colors hover:text-primary ${
+                isActiveLink("/Careers") ? "text-primary" : "text-foreground"
+              }`}
+            >
+              Careers
+            </Link>
+
             <Link
               to="/contact"
               className={`text-sm font-bold transition-colors hover:text-primary ${

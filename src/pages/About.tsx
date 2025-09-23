@@ -19,6 +19,7 @@ import {
   Heart,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import Founderprofile from "@/components/Founderprofile";
 
 const About = () => {
   const values = [
@@ -71,6 +72,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <Founderprofile />
 
       {/* Company Story */}
       <section className="py-20">
@@ -82,28 +84,41 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Founded in 2009, HYCROP began with a simple mission: to
-                  provide farmers with the highest quality agricultural
-                  solutions that deliver real results. We started as a small
-                  company with big dreams and an unwavering commitment to
-                  agricultural excellence.
+                  Founded in 2025, <strong>HYCROP Agri Solutions</strong> was
+                  born from a clear vision — to empower farmers with
+                  high-quality agricultural solutions that truly make a
+                  difference. What began as a modest initiative with big
+                  aspirations has now grown into a trusted name in the farming
+                  community.
                 </p>
                 <p>
-                  Over the years, we have grown to become a trusted partner for
-                  thousands of farmers across the region. Our success is built
-                  on scientific innovation, quality products, and most
-                  importantly, the success of the farmers we serve.
+                  From the very beginning, our journey has been guided by a deep
+                  commitment to agricultural excellence. By combining scientific
+                  innovation, sustainable practices, and a farmer-first
+                  approach, we have built strong relationships that go beyond
+                  business — partnerships rooted in trust and shared growth.
                 </p>
                 <p>
-                  Today, HYCROP stands as a symbol of trust in the agricultural
-                  community, continuously innovating to meet the evolving needs
-                  of modern farming while staying true to our core values.
+                  Over the years, HYCROP has evolved into more than just a
+                  provider of crop protection and productivity solutions. We
+                  have become a{" "}
+                  <strong> partner to thousands of farmers</strong>, dedicated
+                  to safeguarding their crops, improving yields, and ultimately
+                  enhancing their livelihoods.
+                </p>
+                <p>
+                  Today, HYCROP stands as a{" "}
+                  <strong>symbol of trust and progress in agriculture.</strong>{" "}
+                  While the needs of modern farming continue to evolve, our
+                  mission remains the same: to deliver innovative, sustainable,
+                  and impactful solutions — helping farmers achieve healthier
+                  crops, higher yields, and a brighter future.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-primary/5 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-primary mb-2">15+</div>
+                <div className="text-3xl font-bold text-primary mb-2">26+</div>
                 <div className="text-muted-foreground">Years of Experience</div>
               </div>
               <div className="bg-accent/10 p-6 rounded-lg text-center">
@@ -129,7 +144,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* 
       <section className="py-20 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -198,7 +213,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
+     
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -231,7 +246,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* CTA */}
+     
       <section className="py-20 ">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-black">
@@ -261,9 +276,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* <Footer /> */}
+      </section> */}
     </div>
   );
 };
