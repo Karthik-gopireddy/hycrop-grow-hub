@@ -66,7 +66,7 @@ const About = () => {
           <div className="text-white">
             <h1 className="text-5xl font-bold mb-6">About HYCROP</h1>
             <p className="text-xl text-white/90">
-              Cultivating Trust, Harvesting Success - Your Partner in
+              Cultivating Trust, Harvesting Success, Your Partner in
               Agricultural Excellence
             </p>
           </div>
@@ -85,8 +85,8 @@ const About = () => {
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
                   Founded in 2025, <strong>HYCROP Agri Solutions</strong> was
-                  born from a clear vision — to empower farmers with
-                  high-quality agricultural solutions that truly make a
+                  born from a clear vision to empower farmers with
+                  high quality agricultural solutions that truly make a
                   difference. What began as a modest initiative with big
                   aspirations has now grown into a trusted name in the farming
                   community.
@@ -96,13 +96,12 @@ const About = () => {
                   commitment to agricultural excellence. By combining scientific
                   innovation, sustainable practices, and a farmer-first
                   approach, we have built strong relationships that go beyond
-                  business — partnerships rooted in trust and shared growth.
+                  business partnerships rooted in trust and shared growth.
                 </p>
                 <p>
                   Over the years, HYCROP has evolved into more than just a
                   provider of crop protection and productivity solutions. We
-                  have become a{" "}
-                  <strong> partner to thousands of farmers</strong>, dedicated
+                  have become a{" "}<strong>partner to thousands of farmers</strong>, dedicated
                   to safeguarding their crops, improving yields, and ultimately
                   enhancing their livelihoods.
                 </p>
@@ -110,8 +109,8 @@ const About = () => {
                   Today, HYCROP stands as a{" "}
                   <strong>symbol of trust and progress in agriculture.</strong>{" "}
                   While the needs of modern farming continue to evolve, our
-                  mission remains the same: to deliver innovative, sustainable,
-                  and impactful solutions — helping farmers achieve healthier
+                  mission remains the same to deliver innovative, sustainable,
+                  and impactful solutions helping farmers achieve healthier
                   crops, higher yields, and a brighter future.
                 </p>
               </div>

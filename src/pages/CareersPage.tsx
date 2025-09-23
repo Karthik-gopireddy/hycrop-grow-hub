@@ -270,7 +270,7 @@ const CareersPage = () => {
               We are looking for individuals who are:
             </h2>
             <ul className="list-disc list-inside text-gray-600 space-y-2 mb-4">
-              <li>Result-oriented and take ownership of their work</li>
+              <li>Result oriented and take ownership of their work</li>
               <li>Committed to excellence and continuous learning</li>
               <li>Agile in adapting to challenges with speed and precision</li>
               <li>Collaborative in building strong teams and shared success</li>
@@ -303,12 +303,12 @@ const CareersPage = () => {
               </li>
               <li>
                 <strong>Learning & Development:</strong> Exposure to challenging
-                assignments, skill-building programs, and cross-functional
+                assignments, skill building programs, and cross-functional
                 learning experiences.
               </li>
               <li>
                 <strong>Work-Life Balance:</strong> A culture that values
-                personal well-being alongside professional effectiveness.
+                personal well being alongside professional effectiveness.
               </li>
               <li>
                 <strong>Inclusive Workplace:</strong> As an equal opportunity
@@ -321,7 +321,7 @@ const CareersPage = () => {
               </li>
             </ul>
             <p className="text-gray-600 mt-4 leading-relaxed">
-              At Hycrop, you don’t just build a career — you grow with us. Join
+              At Hycrop, you dont just build a career you grow with us. Join
               us, and be a part of our journey to deliver innovative
               agricultural solutions, empower farming communities, and create a
               sustainable future.

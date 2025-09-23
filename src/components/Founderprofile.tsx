@@ -6,7 +6,7 @@ import { Leaf, Users, FlaskConical, ShieldCheck, Zap } from "lucide-react";
 const coreValues = [
   {
     icon: <Users className="w-6 h-6 text-green-600" />,
-    title: "Farmer-Centric Commitment",
+    title: "Farmer Centric Commitment",
     desc: "We exist to empower the farming community with growth, prosperity, and sustainability.",
   },
   {
@@ -101,7 +101,7 @@ export default function Founderprofile() {
               guided the team towards excellence, seizing new opportunities and
               transforming them into milestones of growth. His calm and
               pragmatic approach to complex business challenges ensures focus on
-              the long-term vision—bringing meaningful, positive change to the
+              the long term vision bringing meaningful, positive change to the
               agriculture sector.
             </p>
           </div>
@@ -144,7 +144,7 @@ export default function Founderprofile() {
                 conditions.
               </li>
               <li>
-                To provide high-quality products and services with dedication.
+                To provide high quality products and services with dedication.
               </li>
               <li>
                 To become a leading supplier of agricultural inputs at
@@ -159,7 +159,7 @@ export default function Founderprofile() {
             <h2 className="text-xl font-bold text-yellow-700 mb-4">Mission</h2>
             <p className="text-gray-700 leading-relaxed">
               To be a trusted partner for farmers, enhancing crop yields through
-              innovative, sustainable, and high-quality solutions, delivered
+              innovative, sustainable, and high quality solutions, delivered
               with consistent performance, ethical practices, and a commitment
               to improving farmers livelihoods.
             </p>

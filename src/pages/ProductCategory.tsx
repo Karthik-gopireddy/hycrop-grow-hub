@@ -294,22 +294,22 @@ const ProductCategory = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-primary">
+      <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="text-white">
+          <div className="text-black">
             <h2 className="text-4xl font-bold mb-4">
               Need Help with Product Selection?
             </h2>
-            <p className="text-xl mb-8 text-white/90">
+            <p className="text-xl mb-8 text-black/90">
               Our experts can help you choose the right products for your specific crop needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+                <Button size="lg"  className="bg-green-800 text-white">
                   Contact Our Experts
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button size="lg" className="bg-green-800 text-white ">
                 Download Usage Guide
               </Button>
             </div>
